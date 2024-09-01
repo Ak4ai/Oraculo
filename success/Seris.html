@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>cyberpunk - terminal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container on">
+    <div class="screen">
+      <h3 class="title">
+        CONEXÃO BARRADA
+      </h3>
+      <div class="box--outer">
+        <div class="box">
+          <div class="box--inner">
+            <div class="content">
+              <div class="holder">
+                <b>Welcome to SINGULARIDADE</b> — the high-performance automotive solutions with&nbsp;a&nbsp;soul. Please enter your user credentials.
+                <br>
+                <br>
+                <div class="row">
+                  <div class="col col__left label">
+                    Login
+                  </div>
+                  <div class="col col__center">
+                    <input type="text" id="login" maxlength="32" value="Klein" readonly>
+                  </div>
+                </div>
+                <form id="loginForm" method="post" action="/password">
+                  <div class="row">
+                    <div class="col col__left label">
+                      Password
+                    </div>
+                    <div class="col col__center">
+                      <input type="password" id="password" name="password" required="required" placeholder="" data-error="" maxlength="32" autocomplete="new-password"
+                        autofocus="true" />
+                    </div>
+                  </div>
+                  <!-- <b class="flash">ACCESS DENIED</b> -->
+                  <div class="row">
+                    <button type="submit" id="submit" name="submit">[login]</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+
+      // Get the password value
+      var password = document.getElementById('password').value;
+
+      // Check if the password is correct
+      if (password === 'Métis') {
+        // Redirect to a new page if the password is correct
+        window.location.href = '/success'; // Replace '/success' with the URL of the page you want to redirect to
+      } else {
+        // Display an error message or handle incorrect password
+        alert('Incorrect password');
+      }
+    });
+  </script>
+</body>
+
+</html>
