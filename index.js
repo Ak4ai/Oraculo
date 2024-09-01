@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Check if the password is correct
     if (password === 'Métis') {
       // Redirect to a new page if the password is correct
-      window.location.href = '/success'; // Replace '/success' with the URL of the page you want to redirect to
+      window.location.href = '/Oraculo/success'; // Replace '/success' with the URL of the page you want to redirect to
     } else {
       // Display an error message or handle incorrect password
       alert('Incorrect password');
